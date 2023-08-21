@@ -1,0 +1,134 @@
+:root {
+  --COLOR-GRAY: #ffffff;
+  --COLOR-GRAY-DARK: #0c1ff1;
+  --COLOR-GRAY-LIGHT: #cccccc;
+  --COLOR-ONGOING: #98c1d9;
+  --COLOR-DONE: #ee6c4d;
+  font-family: Helvetica;
+}
+body{
+  margin: 0;
+}
+
+.App{
+  background: var(--COLOR-GRAY);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.column{
+  background: var(--COLOR-GRAY-DARK);
+  min-height: 20rem;
+  color: #fff;
+  width: 33%;
+  max-width: 20rem;
+  margin:0 0.5rem;
+  border-radius: 4px;
+  padding: 0.5rem;
+  border: dashed transparent 4px;
+
+}
+
+.column.drop{
+
+  border: dashed white 4px;
+
+
+
+}
+
+.task{
+  background: white;
+  border-radius: 4px;
+  min-height: 5rem;
+  color:black;
+  padding:0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  cursor: move;
+}
+
+.bottomWrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.status{
+  font-size:small;
+  background: var(--COLOR-GRAY-LIGHT);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+.PLANNED{
+
+  background: var(--COLOR-GRAY-LIGHT);
+
+
+
+}
+
+.ONGOING{
+  background: var(--COLOR-ONGOING);
+
+}
+
+.DONE{
+background: var(--COLOR-DONE);
+}
+
+.titleWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleWrapper button {
+  all:unset;
+  color: black;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.titleWrapper button:hover{
+  background: var(--COLOR-GRAY-LIGHT);
+}
+
+.Modal{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.modalContent{
+  background: white;
+  position: absolute;
+  z-index: 1;
+  padding: 1rem;
+  height: 5rem;
+  width: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.task img{
+  height: 1.25rem;
+  cursor: pointer;
+}
